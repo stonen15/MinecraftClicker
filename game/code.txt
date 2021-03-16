@@ -1,0 +1,1312 @@
+
+<!-- 
+	James Billinger
+	Yi Bo Cheng
+	06/13/2019
+	Minecraft clicker
+	This is the HTML for our game 
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Game</title>
+		<!-- font links -->
+		<link href="https://fonts.googleapis.com/css?family=Metrophobic" rel="stylesheet">		
+		<!-- jquery -->
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"></script>
+			<!-- javascript link -->
+			<script type="text/javascript" src="game.js"></script>
+		 	<!-- css link -->
+			<link rel="stylesheet" type="text/css" href="game.css">
+	</head>
+	<body>
+		<!-- count bar -->
+		<div id="countBar">
+			<img id="dollarSign" src="../images/dollarSign.png">
+			<img id="heart" src="../images/heart.png">
+			<img id="clock" class="timer" src="../images/timer.png">
+			<label id="lblCount">0</label>
+			<label id="lblName"></label>
+			<label id="lblTime" class="timer">0</label>
+		</div>
+		<!-- clickers -->
+		<div id="clickerWood" class="clicker">
+			<img src="../images/clickers/log.png" id="clickerImageWood" class="clickerImage">
+		</div>
+		<div id="clickerStone" class="clicker">
+			<img src="../images/clickers/stone.png" id="clickerImageStone" class="clickerImage">
+		</div>
+		<div id="clickerIronOre" class="clicker">
+			<img src="../images/clickers/ironOre.png" id="clickerImageIronOre" class="clickerImage">
+		</div>
+		<div id="clickerGoldOre" class="clicker">
+			<img src="../images/clickers/goldOre.png" id="clickerImageGoldOre" class="clickerImage">
+		</div>
+		<div id="clickerDiamondOre" class="clicker">
+			<img src="../images/clickers/diamondOre.png" id="clickerImageDiamondOre" class="clickerImage">
+		</div>
+		<div id="clickerDragon">
+			<img src="../images/clickers/dragonClicker.png" id="clickerImageDragon">
+		</div>
+		<!-- time records -->
+		<img id="timeRecordsListBackground" src="../images/map.png">
+
+		<div id="timeRecordsList">
+			<h1>BEST TIME</h1>
+			<label id="lblBestTime"></label>
+		</div>
+		<!-- change buttons -->
+		<button id="btnChange" class="changeButton">Cycle materials</button>
+		<button id="btnChange2" class="changeButton">Cycle materials</button>
+		<button id="btnChange3" class="changeButton">Cycle materials</button>
+		<button id="btnChange4" class="changeButton">Cycle materials</button>
+		<button id="btnChange5" class="changeButton">Cycle materials</button>
+		<!-- clickable icons -->
+		<img  id="shopImage" src="../images/shopImage.png" class="icons">
+		<img  id="helpImage" src="../images/helpImage.png" class="icons">
+		<img id="settingsImage" src="../images/settingsImage.png" class="icons" class="openSettings">
+		<img id="endImage" src="../images/endPortal.png" class="icons" class="openEnd">
+		<label id="lblStore" class="labels">Store</label>
+		<label id="lblHelp" class="labels">Help</label>
+		<label id="lblEnd" class="labels">The End</label>
+		<label id="lblEndtext1" class="endText">So you think that you can enter my home...</label>
+		<label id="lblEndtext2" class="endText">Ruining my perfect untouched world with your very existence...</label>
+		<label id="lblEndtext3">This act is unforgivable...</label>
+		<label id="lblEndtext4" class="endText">I will make sure to savour every last bit of your flesh.</label>
+		<label id="lblDragon" class="DragonLabel">Kill the Ender Dragon!!!</label>
+		<!-- POPUPS -->
+		<!-- shop -->
+		<div id="shopPopUp" class="popUp">
+			<div id="shopPopUpContent" class="popUpContent">
+				<h1>Shop</h1>
+				<div id="itemCost">
+					<label id="lblRedstonePrice" class="lblPrice">20</label>
+					<label id="lblAxesPrice" class="lblPrice">100</label>
+					<label id="lblPickaxesPrice" class="lblPrice">3232</label>
+					<label id="lblSpecialPrice" class="lblPrice">200</label>
+				</div>
+				<div id="redstone">
+					<p class="shopRedstoneDescription">Redstone Dust: +1 every 5 sec</p>
+					<img src="../images/redstoneItems/redstoneDust.png" id="shop_redstoneDust" class="shopRedstone">
+					<img src="../images/redstoneItems/redstoneBlock.png" id="shop_redstoneBlock" class="shopRedstone">
+					<img src="../images/redstoneItems/redstoneRepeater.png" id="shop_redstoneRepeater" class="shopRedstone">
+				</div>
+				<div id="axes">
+					<p class="shopAxeDescription">A Wooden Axe: gives+1 per click on <b>wood</b>.</p>
+					<img src="../images/cursors/woodAxe.png" id="shop_woodAxe" class="shopAxe">
+					<img src="../images/cursors/stoneAxe.png" id="shop_stoneAxe" class="shopAxe">
+					<img src="../images/cursors/ironAxe.png" id="shop_ironAxe" class="shopAxe">					
+					<img src="../images/cursors/goldAxe.png" id="shop_goldAxe" class="shopAxe">					
+					<img src="../images/cursors/diamondAxe.png" id="shop_diamondAxe" class="shopAxe">				
+				</div>
+				<div id="pickaxes">
+					<p class="shopPickaxeDescription">A Wooden Pickaxe: gives+1 per click on stone or ores.</p>
+					<img src="../images/cursors/woodPickaxe.png" id="shop_woodPickaxe" class="shopPickaxe">
+					<img src="../images/cursors/stonePickaxe.png" id="shop_stonePickaxe" class="shopPickaxe">
+					<img src="../images/cursors/ironPickaxe.png" id="shop_ironPickaxe" class="shopPickaxe">			
+					<img src="../images/cursors/goldPickaxe.png" id="shop_goldPickaxe" class="shopPickaxe">			
+					<img src="../images/cursors/diamondPickaxe.png" id="shop_diamondPickaxe" class="shopPickaxe">		
+				</div>
+				<div id="eyeOfEnder">
+					<p class="shopSpecialDescription">Gives the ability to access <b>The End</b>.</p>
+					<img src="../images/redstoneItems/eyeOfEnder.png" id="shop_eyeOfEnder" class="shopSpecial">
+				</div>
+				<button id="btnCloseShop" class="btnClose">Close</button>
+			</div>	
+		</div>
+		<!-- settings -->
+		<div id="settingsPopUp" class="popUp">
+			<div id="settingsPopUpContent" class="popUpContent">
+				<h1>Settings</h1>
+				<br>
+				<br>
+				<h2>Music Settings</h2>
+				<audio src="../audio/subwooferLullaby.mp3" controls="" autoplay="" loop="" id="mainMusic"></audio><br><br>
+				<h2>Boss Music</h2>		
+				<audio src="../audio/bossMusic.mp3" autoplay="" controls="" loop="" id="bossMusic"></audio>
+				<button id="moneyButton">Krnic cheat button</button>
+				<button id="btnCloseSettings" class="btnClose">Close</button>
+			</div>
+		</div>
+		<!-- help -->
+		<div id="helpPopUp" class="popUp">
+			<div id="helpPopUpContent" class="popUpContent">
+				<h1>Help</h1><br>
+				<h2>How To Play</h2>
+				<p>
+					The goal of this game is to mine up diffent resources in order to gain more and more money. gather upgrades to make your mining more efficient and upgrade your tools. Keep mining and mining until you become so powerfull, you could slay a dragon. 
+				</p>
+				<button id="btnCloseHelp" class="btnClose">Close</button>
+			</div>
+		</div>
+		<!-- Win screen -->
+		<div id="winPopUp" class="popUp">
+			<div id="winPopUpContent" class="popUpContent">
+				<br>
+				<br>
+				<br>
+				<br>
+				<h1>You have slain the Ender Dragon!</h1>
+				<br>
+				<h2>Thanks to you, a new era of peace and tranquility shall wash over the four corners of the globe.</h2>
+				<br>
+				<button id="btnContinue" class="btnClose">Continue</button>
+			</div>
+		</div>
+		<!-- Name popup -->
+		<div id="namePopup" class="popUp">
+			<div id="namePopUpContent">
+				<br>
+				<br>
+				<h1>Please enter your name</h1>
+				<br>
+				<input type="text" id="txtNameInput">
+				<button id="btnPlay">Play</button>
+				<br>
+				<br>
+			</div>
+		</div>
+	</body>
+</html>
+/*
+	James Billinger
+	Yi Bo Cheng
+	06/13/2019
+	Bee clicker
+	This is the CSS for our game 
+*/
+*{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+/* fonts */
+@font-face{
+	src: url(../fonts/Minecraftia.ttf);
+	font-family: minecraftFont;
+}
+body{
+	background-image: url(../images/backgrounds/surface.jpg);
+	background-size: cover;
+	font-family: minecraftFont;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+img{
+	user-drag: none; 
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+/* count bar */
+#dollarSign{
+	position: absolute;
+	height: 100%;
+	width: 10%;
+	left: 650px;
+}
+#heart{
+	position: absolute;
+	height: 100%;
+	width: 10%;
+	left: 650px;
+}
+#countBar{
+	background-image: url(../images/headerBackground.jpg);
+	width: 100%;
+	height: 120px;
+	position: absolute;
+	color: white;
+	border-style: solid;
+	border-color: black;
+}
+#lblName{
+	position: absolute;
+	top: 20%;
+	left: 5%;
+	font-size: 50px;
+}
+#lblCount{
+	padding: 6px;
+	font-size: 80px;
+}
+#lblTime{
+	position: absolute;
+	top: 20%;
+	right: 20%;
+	font-size: 50px;
+}
+#clock{
+	position: absolute;
+	top: 18%;
+	width: 5%;
+	right: 27%;
+}
+/* time records */
+#timeRecordsList{
+	position: absolute;
+	top: 20%;
+	left: 5%;
+}
+#timeRecordsList h1{
+	font-size: 20px;
+}
+#lblBestTime{
+	font-size: 17px;
+}
+#timeRecordsListBackground{
+	position: absolute;
+	width: 13%;
+	top: 15%;
+	left: 2%;
+}
+/* clicker */
+.clicker{
+	position: fixed;
+	top: 30%;
+	left: 0;
+	right: 0;
+}
+.clickerImage{
+	width: 10%;
+}
+.clickerImage:hover{
+	opacity: 0.9;
+}
+#clickerImageDragon{
+	position: fixed;
+	top: 20%;
+	left: 30%;
+	right: 0;
+	width: 40%;
+	height: 55%;
+}
+#clickerDragon:hover{
+	opacity: 0.9;
+}
+/* icons */
+.icons:hover{
+	opacity: 0.5;
+}
+#settingsImage{
+	position: fixed;
+	top: 14.5%;
+	right: 2%;
+	width: 5%;
+	border: solid;
+	border-radius: 10px;
+}
+#helpImage{
+	position: absolute;
+	bottom: 7%;
+	right: 18%;
+	width: 10%;
+}
+#shopImage{
+	position: absolute;
+	bottom: 7%;
+	left: 19%;
+	height: 23%;
+}
+#lblStore{
+	position: absolute;
+	bottom: 1%;
+	left: 18%;
+	background-color: white;
+	font-size: 30px;
+	padding: 6px;
+	border-radius: 8px;
+}
+#lblHelp{
+	position: absolute;
+	bottom: 1%;
+	right: 20%;
+	background-color: white;
+	font-size: 30px;
+	padding: 6px;
+	border-radius: 8px;
+}
+#hotbar{
+	position: absolute;
+	bottom: 7%;
+	right: 13%;
+	width: 10%;
+}
+
+/* change buttons*/
+.changeButton{
+	background-image: url(../images/backgrounds/changeBackground.jpg);
+	background-size: cover;
+	height: 100px;
+	width: 400px;
+	border-style: solid;
+	border-radius: 8px;
+	font-size: 40px;
+	color: white;
+	top: 55%;
+	left: 40%;
+}
+#btnChange{
+	position: absolute;
+}
+#btnChange2{
+	position: absolute;
+}
+#btnChange3{
+	position: absolute;
+}
+#btnChange4{
+	position: absolute;
+}
+#btnChange5{
+	position: absolute;
+}
+/* popups */
+.popUp{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+.popUpContent{
+	position: fixed;
+	width: 70%;
+	height: 75%;
+	border-width: 2px;
+	border-radius: 10px;
+	top: 13%;
+	left: 15%;
+}
+/* name popup */
+#namePopUpContent{
+	background-image: url(../images/shopBackground.png);
+	border: solid;
+	background-size: cover;
+}
+/* shop and items */
+#shopPopUpContent{
+	background-image: url(../images/shopBackground.png);
+	border: solid;
+	background-size: cover;
+}
+#shopPopupContent img{
+	position: fixed;
+	width: 50%;
+}
+.shopPickaxe{
+	position: absolute;
+	left: 20%;
+	top: 50%;
+	width: 8%;
+	background-color: #C0C0C0;
+	border: solid;
+	border-color: #8B8B8B;
+	border-radius: 10px;
+	filter: brightness(50%);
+}
+.shopPickaxeDescription{
+	position: absolute;
+	top: 50%;
+	right: 7%;
+	background-color: #C0C0C0;
+	padding: 2%;
+	border: solid;
+	border-color: #8B8B8B;
+	border-radius: 10px;
+	filter: brightness(50%);
+}
+.shopAxe{
+	position: absolute;
+	left: 20%;
+	top: 30%;
+	width: 8%;
+	background-color: #C0C0C0;
+	border: solid;
+	border-color: #8B8B8B;
+	border-radius: 10px;
+	filter: brightness(50%);
+}
+.shopAxeDescription{
+	position: absolute;
+	top: 30%;
+	right: 17.5%;
+	background-color: #C0C0C0;
+	padding: 2%;
+	border: solid;
+	border-color: #8B8B8B;
+	border-radius: 10px;
+	filter: brightness(50%);
+}
+.shopRedstone{
+	position: absolute;
+	top: 10%;
+	left: 20%;
+	width: 8%;
+	background-color: #C0C0C0;
+	border: solid;
+	border-color: #8B8B8B;
+	border-radius: 10px;
+	filter: brightness(50%);
+}
+.shopRedstoneDescription{
+	position: absolute;
+	top: 10%;
+	right: 25%;
+	background-color: #C0C0C0;
+	padding: 2%;
+	border: solid;
+	border-color: #8B8B8B;
+	border-radius: 10px;
+	filter: brightness(50%);
+}
+.shopSpecial{
+	position: absolute;
+	left: 20%;
+	top: 70%;
+	width: 8%;
+	background-color: #C0C0C0;
+	border: solid;
+	border-color: #8B8B8B;
+	border-radius: 10px;
+	filter: brightness(50%);
+}
+.shopSpecialDescription{
+	position: absolute;
+	top: 72%;
+	right: 21.5%;
+	background-color: #C0C0C0;
+	padding: 2%;
+	border: solid;
+	border-color: #8B8B8B;
+	border-radius: 10px;
+	filter: brightness(50%);
+}
+#lblRedstonePrice{
+	position: absolute;
+	left: 8%;
+	top: 15%;
+	color: green;
+	font-size:  30px;
+}
+#lblAxesPrice{
+	position: absolute;
+	left: 8%;
+	top: 33.5%;
+	color: green;
+	font-size:  30px;
+}
+#lblPickaxesPrice{
+	position: absolute;
+	left: 8%;
+	top: 54%;
+	color: green;
+	font-size:  30px;
+}
+#lblSpecialPrice{
+	position: absolute;
+	left: 8%;
+	top: 73.5%;
+	color: green;
+	font-size:  30px;
+}
+#btnCloseShop{
+	position: absolute;
+	bottom: 4%;
+	left: 42%;
+	height: 50px;
+	width: 200px;
+}
+
+/* settings */
+#settingsPopUpContent{
+	background-image: url(../images/backgrounds/stoneBackground.jpg);
+	border: solid;
+}
+#bossMusic{
+	position: absolute;
+	left: 39%;
+}
+#btnCloseSettings{
+	position: absolute;
+	bottom: 10%;
+	height: 50px;
+	width: 200px;
+	left: 43%;
+}
+/* help */
+#helpPopUpContent{
+	background-image: url(../images/backgrounds/sign.png);
+	border: solid;
+}
+#moneyButton{
+	position: absolute;
+	bottom: 20%;
+	height: 50px;
+	width: 200px;
+	left: 43%;
+}
+/* boss screen */
+.endText{
+	color: red;
+	position: fixed;
+	top: 10%;
+	left: 2%;
+	font-size: 50px;
+	margin: 20%;
+}
+#lblEndtext3{
+	color: red;
+	position: fixed;
+	top: 10%;
+	left: 10%;
+	font-size: 50px;
+	margin: 20%;
+}
+#lblEnd{
+	position: absolute;
+	bottom: 1%;
+	right: 45.5%;
+	background-color: white;
+	font-size: 30px;
+	padding: 6px;
+	border-radius: 8px;
+}
+#lblDragon{
+	color: red;
+	position: fixed;
+	top: 90%;
+	left: 32%;
+	font-size: 50px;
+}
+#endImage{
+	position: absolute;
+	bottom: 7%;
+	left: 46%;
+}
+/* win screen*/
+#winPopUpContent{
+	position: absolute;
+	background-image: url(../images/backgrounds/winBackground2.jpg);
+	border: solid;
+	color: white;
+	padding: 10%;
+	height: 50%;
+	width: 60%;
+	left: 10%;
+	top: 2%;
+}
+#btnContinue{
+	width: 100px;
+	height: 40px;
+	top: 60%;
+}
+/* name screen */
+#namePopup{
+	position: fixed;
+	width: 70%;
+	height: 75%;
+	border-width: 2px;
+	border-radius: 10px;
+	top: 13%;
+	left: 15%;
+}
+#namePopUpContent{
+	position: fixed;
+	width: 70%;
+	height: 75%;
+	border-width: 2px;
+	border-radius: 10px;
+	top: 13%;
+	left: 15%;
+}
+/* 
+	James Billinger
+	Yi Bo Cheng
+	06/13/2019
+	Bee clicker
+	This is the Javascript for our game 
+*/
+//global value
+let count=0;
+let timeValue=0;
+let multiplier=1;
+$(document).ready(function($){
+	/* setting variables */
+	//game variables
+	let time=0;
+	let timeRecords=[];
+	let inventory=[];
+	let health=0;
+	//block click values
+	/************************************************************************************
+	************************************************************************************
+	************************************************************************************
+	Arrays: value of each block has 2 values (because of the items giving them another one)
+	the block values are in arrays. The value used is dependent on the player's inventory,
+	which is another array.
+	************************************************************************************
+	************************************************************************************
+	************************************************************************************/
+	let woodClickValue=[1,2];
+	let stoneClickValue=[2,3];
+	let ironClickValue=[3,4];
+	let goldClickValue=[4,5];
+	let diamondClickValue=[5,6];
+	//shop items
+	let pickaxes=["woodPickaxe","stonePickaxe","ironPickaxe","goldPickaxe","diamondPickaxe"];
+	let axes=["woodAxe","stoneAxe","ironAxe","goldAxe","diamondAxe"];
+	let redstone=["dust","block","repeater"];
+	let special=["eyeOfEnder"];
+	//sound
+	const rollSound = new Audio("../audio/itemEffect.mp3");
+	const oofSound = new Audio("../audio/oofSound.mp3");
+	$(".clickerImage").click(e => rollSound.play());
+	$("#clickerDragon").click(e => oofSound.play());
+	bossMusic.pause(); 
+
+	/* end of setting variables */
+
+	/* hiding materials */
+	$(".popUp").hide();
+	$(".popUpContent").hide();
+	//timer 
+	$(".timer").hide();
+	//shop item 
+	$(".shopPickaxe").hide();
+	$(".shopAxe").hide();
+	$(".shopRedstone").hide();
+	//change buttons
+	$("#btnChange2").hide();
+	$("#btnChange3").hide();
+	$("#btnChange4").hide();
+	$("#btnChange5").hide();
+	//clickers 
+	$(".clicker").hide();
+	$("#clickerDragon").hide();
+	//miscellaneous 
+	$("#lblDragon").hide();
+	$("#heart").hide();
+	$("#bossMusic").hide();
+	$("#endImage").hide();
+	$("#lblEnd").hide();
+	//text
+	$("#lblEndtext1").hide();
+	$("#lblEndtext2").hide();		
+	$("#lblEndtext3").hide();
+	$("#lblEndtext4").hide();
+	/* end of hiding materials */
+
+	/* show beginning elements */
+	$("#shop_redstoneDust").show();
+	$("#shop_woodAxe").show();
+	$("#shop_woodPickaxe").show();
+	$("#shop_eyeOfEnder").show();
+	$(".shopRedstoneDescription").show();
+	$(".shopAxeDescription").show();
+	$(".shopPickaxeDescription").show();
+	$(".shopSpecialDescription").show();
+	//beginning clicker
+	$("#clickerWood").show();
+	//name popup
+	$("#namePopup").show();
+	/* end of show beginning elemnt*/
+	/************************************************************************************
+	************************************************************************************
+	************************************************************************************
+	String function below takes out the first letter of name and makes it capital, then put
+	it back into the name
+	************************************************************************************
+	************************************************************************************
+	************************************************************************************/
+	$("#btnPlay").click(function(event){
+		let name=$("#txtNameInput").val();
+		let capital=name.charAt(0).toUpperCase();
+		name=name.substring(1);
+		$("#namePopup").hide();
+		$("#namePopUpContent").hide();
+		$("#lblName").text(capital+name);
+	});//end of btnPlay click
+
+	/* click animation */
+	$(".clickerImage").mousedown(function(event){
+		$(".clickerImage").css("width","9.5%");
+	});//end of clicker mousedown
+	$(".clickerImage").mouseup(function(event){
+		$(".clickerImage").css("width","10%");
+	});//end of clicker mouseup
+	$(".clickerImage").mouseleave(function(event){
+		$(".clickerImage").css("width","10%");
+	});//end of clicker mouseleave
+	$("#clickerImageDragon").mousedown(function(event){
+		$("#clickerImageDragon").css("width","37%");
+		$("#clickerImageDragon").css("height","52%");
+	});//end of clicker mousedown
+	$("#clickerImageDragon").mouseup(function(event){
+		$("#clickerImageDragon").css("width","40%");
+		$("#clickerImageDragon").css("height","55%");
+	});//end of clicker mouseup
+	$("#clickerImageDragon").mouseleave(function(event){
+		$("#clickerImageDragon").css("width","40%");
+	});//end of clicker mouseleave
+	/* end of click animations */
+
+	/* shop */
+	$("#shopImage").click(function(event){
+		/* redstone */
+		if(count>=20)
+		{
+			$("#shop_redstoneDust").css("filter", "brightness(100%)");
+			$(".shopRedstoneDescription").css("filter", "brightness(100%)");
+			$("#shop_redstoneDust").click(function(event){
+				count=count-20;								
+				autoItem(5000);
+				inventory.push(redstone.shift());
+				if(redstone[0]!="dust")
+				{
+					$("#shop_redstoneDust").hide();
+				}
+				if(redstone[0]=="block")
+				{
+					$("#shop_redstoneBlock").show();
+					$(".shopRedstoneDescription").html("<p>Redstone Block: +1 every 1 sec</p>")
+					$("#lblRedstonePrice").html("<p>2000</p>")
+					$(".shopRedstoneDescription").css("filter", "brightness(50%)");
+				}		
+				$("#lblCount").text(count);
+			});//end of redstonedust item click
+		}
+		if(count>=2000)
+		{
+			$("#shop_redstoneBlock").css("filter", "brightness(100%)");
+			$(".shopRedstoneDescription").css("filter", "brightness(100%)");
+			$("#shop_redstoneBlock").click(function(event){
+				count-=2000;
+				autoItem(1000);
+				inventory.push(redstone.shift());
+				if(redstone[0]!="block")
+				{
+					$("#shop_redstoneBlock").hide();
+				}
+				if(redstone[0]=="repeater")
+				{
+					$("#shop_redstoneRepeater").show();
+					$(".shopRedstoneDescription").html("<p>Redstone Repeater: +1 every 0.5 sec</p>")
+					$("#lblRedstonePrice").html("<p>20000</p>")
+					$(".shopRedstoneDescription").css("filter", "brightness(50%)");
+				}
+				$("#lblCount").text(count);
+			});//end of redstonedust item click
+		}
+		if(count>=20000)
+		{
+			$("#shop_redstoneRepeater").css("filter", "brightness(100%)");
+			$(".shopRedstoneDescription").css("filter", "brightness(100%)");
+			$("#shop_redstoneRepeater").click(function(event){
+				count-=20000;
+				autoItem(500);
+				inventory.push(redstone.shift());
+				if(redstone[0]!="repeater")
+				{
+					$("#shop_redstoneRepeater").css("filter", "brightness(25%)");
+					$(".shopRedstoneDescription").html("<p>SOLD OUT<p>");
+				}
+				$("#lblCount").text(count);
+
+				alert(inventory);
+			});//end of redstonedust item click
+		}
+		/* pickaxe */
+		if(count>=1000)
+		{
+			$("#shop_woodPickaxe").css("filter", "brightness(100%)");
+			$("#shop_woodPickaxeDescription").css("filter", "brightness(100%)");
+			$("#shop_woodPickaxe").click(function(event){
+				count-=1000;
+				inventory.push(pickaxes.shift());
+				if(pickaxes[0]!="woodPickaxe")
+				{
+					$("#shop_woodPickaxe").hide();
+					$("#shop_woodPickaxeDescription").hide();
+				}
+				if(pickaxes[0]=="stonePickaxe")
+				{
+					$("#shop_stonePickaxe").show();
+					$("#shop_stonePickaxeDescription").show();
+				}
+				$("#lblCount").text(count);
+			});//end of shop_woodPickaxe click
+		}
+		if(count>=5000)
+		{
+			$("#shop_stonePickaxe").css("filter", "brightness(100%)");
+			$("#shop_stonePickaxeDescription").css("filter", "brightness(100%)");
+			$("#shop_stonePickaxe").click(function(event){
+				count-=5000;
+				inventory.push(pickaxes.shift());
+				if(pickaxes[0]!="stonePickaxe")
+				{
+					$("#shop_stonePickaxe").hide();
+					$("#shop_stonePickaxeDescription").hide();
+				}
+				if(pickaxes[0]=="ironPickaxe")
+				{
+					$("#shop_ironPickaxe").show();
+					$("#shop_ironPickaxeDescription").show();
+				}
+				$("#lblCount").text(count);
+			});//end of shop_stonePickaxe click
+		}
+		if(count>=15000)
+		{
+			$("#shop_ironPickaxe").css("filter", "brightness(100%)");
+			$("#shop_ironPickaxeDescription").css("filter", "brightness(100%)");
+			$("#shop_ironPickaxe").click(function(event){
+				count-=15000;
+				inventory.push(pickaxes.shift());
+				if(pickaxes[0]!="ironPickaxe")
+				{
+					$("#shop_ironPickaxe").hide();
+					$("#shop_ironPickaxeDescription").hide();
+				}
+				if(pickaxes[0]=="goldPickaxe")
+				{
+					$("#shop_goldPickaxe").show();
+					$("#shop_goldPickaxeDescription").show();
+				}
+				$("#lblCount").text(count);
+			});//end of shop_ironPickaxe click
+		}
+		if(count>=500000)
+		{
+			$("#shop_goldPickaxe").css("filter", "brightness(100%)");
+			$("#shop_goldPickaxeDescription").css("filter", "brightness(100%)");
+			$("#shop_goldPickaxe").click(function(event){
+				
+				count-=500000;
+				inventory.push(pickaxes.shift());
+				if(pickaxes[0]!="goldPickaxe")
+				{
+					$("#shop_goldPickaxe").hide();
+					$("#shop_goldPickaxeDescription").hide();
+				}
+				if(pickaxes[0]=="diamondPickaxe")
+				{
+					$("#shop_diamondPickaxe").show();
+					$("#shop_diamondPickaxeDescription").show();
+				}
+				$("#lblCount").text(count);
+			});//end of shop_goldPickaxe click
+		}
+		if(count>=1000000)
+		{
+			$("#shop_diamondPickaxe").css("filter", "brightness(100%)");
+			$("#shop_diamondPickaxeDescription").css("filter", "brightness(100%)");
+			$("#shop_diamondPickaxe").click(function(event){
+				count-=1000000;
+				inventory.push(pickaxes.shift());
+				if(pickaxes[0]!="diamondPickaxe")
+				{
+					$("#shop_diamondPickaxe").hide();
+					$("#shop_diamondPickaxeDescription").hide();
+				}
+				$("#lblCount").text(count);		
+			});//end of shop_diamondPickaxe click
+		}
+		/* axes */
+		if(count>=100)
+		{
+			$("#shop_woodAxe").css("filter", "brightness(100%)");
+			$("#shop_woodAxeDescription").css("filter", "brightness(100%)");
+			$("#shop_woodAxe").click(function(event){
+				count=count-100;
+				inventory.push(axes.shift());
+				if(axes[0]!="woodAxe")
+				{
+					$("#shop_woodAxe").hide();
+					$("#shop_woodAxeDescription").hide();
+				}
+				if(axes[0]=="stoneAxe")
+				{
+					$("#shop_stoneAxe").show();
+					$("#shop_stoneAxeDescription").show();
+				}
+				$("#lblCount").text(count);
+			});//end of shop_woodAxe click
+		}
+		if(count>=500)
+		{
+			$("#shop_stoneAxe").css("filter", "brightness(100%)");
+			$("#shop_stoneAxeDescription").css("filter", "brightness(100%)");
+			$("#shop_stoneAxe").click(function(event){
+				count-=500;
+				inventory.push(axes.shift());
+				if(axes[0]!="stoneAxe")
+				{
+					$("#shop_stoneAxe").hide();
+					$("#shop_stoneAxeDescription").hide();
+				}
+				if(axes[0]=="ironAxe")
+				{
+					$("#shop_ironAxe").show();
+					$("#shop_ironAxeDescription").show();
+				}
+				$("#lblCount").text(count);
+			});//end of shop_stoneAxe click
+		}
+		if(count>=1000)
+		{
+			$("#shop_ironAxe").css("filter", "brightness(100%)");
+			$("#shop_ironAxeDescription").css("filter", "brightness(100%)");
+			$("#shop_ironAxe").click(function(event){
+				count-=1000;
+				inventory.push(axes.shift());
+				if(axes[0]!="ironAxe")
+				{
+					$("#shop_ironAxe").hide();
+					$("#shop_ironAxeDescription").hide();
+				}
+				if(axes[0]=="goldAxe")
+				{
+					$("#shop_goldAxe").show();
+					$("#shop_goldAxeDescription").show();
+				}
+				$("#lblCount").text(count);
+			});//end of shop_ironAxe click
+		}
+		if(count>=5000)
+		{
+			$("#shop_goldAxe").css("filter", "brightness(100%)");
+			$("#shop_goldAxeDescription").css("filter", "brightness(100%)");
+			$("#shop_goldAxe").click(function(event){
+				count-=5000;
+				inventory.push(axes.shift());
+				if(axes[0]!="goldAxe")
+				{
+					$("#shop_goldAxe").hide();
+					$("#shop_goldAxeDescription").hide();
+				}
+				if(axes[0]=="diamondAxe")
+				{
+					$("#shop_diamondAxe").show();
+					$("#shop_diamondAxeDescription").show();
+				}
+				$("#lblCount").text(count);
+			});//end of shop_goldAxe click
+		}
+		if(count>=10000)
+		{
+			$("#shop_diamondAxe").click(function(event){
+				count-=10000;
+				inventory.push(axes.shift());
+				if(axes[0]!="diamondAxe")
+				{
+					$("#shop_diamondAxe").hide();
+					$("#shop_diamondAxeDescription").hide();
+				}
+				$("#lblCount").text(count);
+				alert(inventory);
+			});//end of shop_diamondAxe click
+		}
+		if(count>=10000000)
+		{
+			$("#shop_eyeOfEnder").css("filter", "brightness(100%)");
+			$(".shopSpecialDescription").css("filter", "brightness(100%)");
+			$("#shop_eyeOfEnder").click(function(event){
+				count-=10000000;
+				inventory.push(special.shift());
+				if(special[0]!="eyeOfEnder")
+				{
+					$("#shop_eyeOfEnder").css("filter", "brightness(25%)");
+					$(".shopSpecialDescription").html("<p>SOLD OUT<p>");
+				}
+				$("#lblCount").text(count);
+				$("#endImage").show();
+				$("#lblEnd").show();
+			});//end of shop_eyeOfEnder click
+		}
+	});//end of shop click
+	/* end of shop */
+	
+	/* clicker values */
+	$("#clickerImageWood").mousedown(function(event){
+		count+=addAmount(woodClickValue[0]);
+		//for(let x=0;x<)
+		$("#lblCount").text(count);
+	});//end of clicker mousedown
+	$("#clickerImageWood").mouseover(function(event){
+		$("#clickerImageWood").css("cursor", "url(../images/cursors/hand.png), auto");
+	});//end of mouseover
+	$("#clickerImageStone").mousedown(function(event){
+		count+=addAmount(stoneClickValue[0]);
+		$("#lblCount").text(count);
+	});//end of clicker mousedown
+	$("#clickerImageStone").mouseover(function(event){
+		$("#clickerImageStone").css("cursor", "url(../images/cursors/hand.png), auto");
+	});//end of mouseover
+	$("#clickerImageIronOre").mousedown(function(event){
+		count+=addAmount(stoneClickValue[0]);
+		$("#lblCount").text(count);
+	});//end of clicker mousedown
+	$("#clickerImageIronOre").mouseover(function(event){
+		$("#clickerImageIronOre").css("cursor", "url(../images/cursors/hand.png), auto");
+	});//end of mouseover
+	$("#clickerImageGoldOre").mousedown(function(event){
+		let add=0;
+		add+=4;
+		add*=multiplier;
+		count+=add;
+		$("#lblCount").text(count);
+	});//end of clicker mousedown
+	$("#clickerImageGoldOre").mouseover(function(event){
+		$("#clickerImageGoldOre").css("cursor", "url(../images/cursors/hand.png), auto");
+	});//end of mouseover
+	$("#clickerImageDiamondOre").mousedown(function(event){
+		let add=0;
+		add+=5;
+		add*=multiplier;
+		count+=add;
+		$("#lblCount").text(count);
+	});//end of clicker mousedown
+	$("#clickerImageDiamondOre").mouseover(function(event){
+		$("#clickerImageDiamondOre").css("cursor", "url(../images/cursors/hand.png), auto");
+	});//end of mouseover
+	$("#clickerImageDragon").mousedown(function(event){
+		let add=0;
+		add-=1;
+		health+=add;
+		$("#lblCount").text(health);
+		if(health<=0)
+		{
+			bossMusic.pause();
+			$("#winPopUp").show();
+			$("#winPopUpContent").show();
+			$("#lblDragon").hide();
+			$(".timer").hide();
+			clearInterval(time);
+			alert(timeValue);
+			timeRecords.push(timeValue);
+			/************************************************************************************
+			************************************************************************************
+			 bubble sort below sorts the best/least time used to beat the boss and displays
+			 the time
+			************************************************************************************			*******************
+			************************************************************************************/
+
+			for(let pass=0;pass<timeRecords.length;pass++)
+			{
+				for(index=0;index<timeRecords.length-1;index++)
+				{
+					if(timeRecords[index]>timeRecords[index+1])
+					{
+						tempNum=timeRecords[index+1];
+						timeRecords[index+1]=timeRecords[index];
+						timeRecords[index]=tempNum;
+					}
+				}
+			}
+			$("#lblBestTime").text(timeRecords[0]);
+		}
+	});//end of clicker mousedown
+	$("#clickerImageDragon").mouseover(function(event){
+		$("#clickerImageDragon").css("cursor", "url(../images/cursors/hand.png), auto");
+	});//end of mouseover
+	/* end of click value */
+
+	/* TEMP change buttons */
+	$("#btnChange").click(function(event){
+		$("#clickerWood").hide();
+		$("#clickerStone").show();
+		$("#btnChange").hide();
+		$("#btnChange2").show();
+		$("body").css("background-image", "url(../images/backgrounds/cave.png");
+	});//
+	$("#btnChange2").click(function(event){
+		$("#clickerStone").hide();
+		$("#clickerIronOre").show();
+		$("#btnChange2").hide();
+		$("#btnChange3").show();
+		$("body").css("background-image", "url(../images/backgrounds/ironBackground.jpeg");
+	});//
+	$("#btnChange3").click(function(event){
+		$("#clickerIronOre").hide();
+		$("#clickerGoldOre").show();
+		$("#btnChange3").hide();
+		$("#btnChange4").show();
+		$("body").css("background-image", "url(../images/backgrounds/goldBackground.jpeg");
+	});//
+	$("#btnChange4").click(function(event){
+		$("#clickerGoldOre").hide();
+		$("#clickerDiamondOre").show();
+		$("#btnChange4").hide();
+		$("#btnChange5").show();
+		$("body").css("background-image", "url(../images/backgrounds/diamondBackground.jpg");
+	});//
+	$("#btnChange5").click(function(event){
+		$("#clickerDiamondOre").hide();
+		$("#clickerWood").show();
+		$("#btnChange5").hide();
+		$("#btnChange").show();
+		$("body").css("background-image", "url(../images/backgrounds/surface.jpg");
+	});//
+	/* end of TEMP change buttons */
+
+	/* POPUPS */
+	//settings
+	$("#settingsImage").click(function(event){
+		$("#settingsPopUp").show();
+		$("#settingsPopUpContent").show();
+	});//end of settingsImage click
+	//cheat button
+	$("#moneyButton").click(function(event){
+		let add=0;
+		add+=1000000000;
+		add*=multiplier;
+		count+=add;
+		$("#lblCount").text(count);
+	});
+	//help
+	$("#helpImage").click(function(event){
+		$("#helpPopUp").show();
+		$("#helpPopUpContent").show();
+	});//end of helpImage click
+	//shop
+	$("#shopImage").click(function(event){
+		$("#shopPopUp").show();
+		$("#shopPopUpContent").show();
+	});//end of shop click
+	//close button
+	$(".btnClose").click(function(event){
+		$(".popUp").hide();
+		$(".popUpContent").hide();
+	});//end of btnClose click
+	/* end of POPUPS */
+
+	/* END */		
+	$("#endImage").click(function(event){
+		health=300;
+		$("#bossMusic").show();
+		bossMusic.play();
+		mainMusic.pause();
+		$("#lblCount").text(health);
+		$("body").css("background-image", "url(../images/backgrounds/endBackground.jpg");
+		$(".clicker").hide();
+		$("#dollarSign").hide();
+		$(".changeButton").hide();
+		$(".labels").hide();
+		$("#helpImage").hide();
+		$("#shopImage").hide();
+		$("#endImage").hide();
+		$("#heart").show();
+		$("#lblEndtext1").fadeIn(3000,function(){
+			$("#lblEndtext1").fadeOut(3000,function(){
+				$("#lblEndtext2").fadeIn(3000,function(){
+					$("#lblEndtext2").fadeOut(3000,function(){
+						$("#lblEndtext3").fadeIn(3000,function(){
+							$("#lblEndtext3").fadeOut(3000,function(){
+								$("#lblEndtext4").fadeIn(3000,function(){
+									$("#lblEndtext4").fadeOut(3000,function(){
+										$("#clickerDragon").fadeIn(10,function(){
+											$("#lblDragon").fadeIn();
+											$(".timer").show();
+											timeValue=0;
+											$("#lblTime").text(timeValue);
+											time=setInterval(addTime,1000)
+										});
+									});
+								});
+							});
+						});
+					});
+				});
+			});
+		});
+	});//end of endImage click
+	$("#btnContinue").click(function(event){
+		$("#lblCount").text(count);
+		$("body").css("background-image", "url(../images/backgrounds/surface.jpg");
+		$("#clickerWood").show();
+		$("#dollarSign").show();
+		$("#btnChange").show();
+		$(".labels").show();
+		$("#helpImage").show();
+		$("#shopImage").show();
+		$("#endImage").show();
+		$("#clickerDragon").hide();
+		$("#lblDragon").hide();
+		$("#heart").hide();
+	});
+	/* end of END */
+});//end of document ready
+function autoItem(timeInterval) 
+{
+	setInterval(intervalAddAmount, timeInterval);
+}
+/************************************************************************************
+************************************************************************************
+************************************************************************************
+function without parameters: this function is the action that occurs when it is put into
+the interval functions
+************************************************************************************
+************************************************************************************/
+function intervalAddAmount()
+{
+	count++;
+	$("#lblCount").text(count);
+}
+/***************************************
+************************************************************************************
+************************************************************************************
+function without return value: function below only adds time, therefore it does not
+need to return
+************************************************************************************
+************************************************************************************
+***************************************/
+function addTime()
+{
+	timeValue++;
+	$("#lblTime").text(timeValue);
+}
+/*********************************
+************************************************************************************
+************************************************************************************
+function with parameters: this function has 1 parameter. blockvalue refers to the
+amount of money you get for clicking a certain type of block. 
+************************************************************************************
+************************************************************************************
+*********************************/
+function addAmount(blockValue)
+{
+	let add=0;
+	add+=blockValue;
+	add*=multiplier;
+	return add;
+}
+/************************************
+************************************************************************************
+************************************************************************************
+function with return value: the function checks for if you have an item that can 
+increase the amount you earn per click. the function will return the paremeter index
+which will change the value of the block.
+ ************************************************************************************
+ ************************************************************************************
+ ************************************************************************************ 
+************************************/
+function findItem(block,item)
+{	
+	let itemParameterIndex=1;
+	for(let x=0;x<inventory.length;x++)
+	{
+		if(inventory[x]==item)
+		{
+			itemParameterIndex=2;
+			break;
+		}
+	}
+	return itemParameterIndex;
+}

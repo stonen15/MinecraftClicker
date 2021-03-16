@@ -1,0 +1,200 @@
+/*
+	James Billinger
+	Yi Bo Cheng
+	05/31/2019
+	Bee clicker
+	This is the css for the homepage of our game 
+*/
+*{
+	margin: 0;
+	padding: 0;
+}
+@font-face{
+	src: url(fonts/Minecraftia.ttf);
+	font-family: minecraftFont;
+}
+body{
+	background-image: url(images/backgrounds/stoneBackground.jpg);
+	background-size: 10%;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	font-family: minecraftFont;
+}
+
+/* heading styles */
+#heading{
+	width: 100%;
+	height: 120px;
+	background-image: url(images/backgrounds/woodBackground.jpg);
+	background-size: 8%;
+	border-top: solid;
+	border-bottom: solid;
+}
+#titles{
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 120%;
+	color: white;
+	height: 120px;
+}
+#home{
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+  width: 100px;
+  height: 100px;
+  background-color: grey;
+  border: solid;
+  border-color: white;
+  border-radius: 15px;
+}
+#home:hover{
+	filter: brightness(75%);
+}
+/* end of heading styles */
+
+/* description styles */
+#container{
+	margin-top: 50px;
+	margin-left: 10%;
+	margin-right: 10%;
+	background-image: url(images/backgrounds/woodPlank.png);
+	background-size: 10%;
+	border: solid;
+	padding-top: 10px;
+	border-radius: 15px;
+}
+#container h2{
+	margin-bottom: 15px;
+	color: black;
+	background-image: url(images/backgrounds/sandBackground.jpg);
+	background-size: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	border-radius: 10px;
+	border: solid;
+	font-size: 200%;
+}
+.bubbles{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+}
+.bubbles p{
+	font-size: 125%;
+	border-color: black;
+	color: white;
+	background-image: url(images/backgrounds/stoneBackground.jpg);
+	background-size: 10%;
+	border-radius: 10px;
+	padding: 2.5%;
+	border-style: solid;
+	margin-bottom: 10px;
+}
+.bubbles img{
+	margin-bottom: 15px;
+}
+/* end of description styles */
+/* decoration styles */
+#homepageBee1{
+	position: absolute;
+	height: 75px;
+	width: 75px;
+	left: 3%;
+}
+#homepageBee2{
+	position: absolute;
+	height: 75px;
+	width: 75px;
+	left: 93%;
+}
+/* end of decoration styles */
+/* link styles */
+#links a{
+	text-decoration: none;
+	color: white;
+	background-image: url(images/backgrounds/stoneBackground.jpg);
+	background-size: 100%;
+	border: solid;
+	border-color: black;
+	border-radius: 15px;
+	padding: 11px;
+}
+#links a:hover{
+	opacity: 0.7;
+}
+#links h2{
+	margin-bottom: 20px;
+}
+#links{
+	margin-bottom: 3.5%;
+}
+/* end of link styles */
+
+/* SKETCHES */
+.sketches{
+	width: 50%;
+	height: 50%;
+	border-radius: 10px;
+	border: solid;
+	margin-bottom: 10px;
+	background-color: grey;
+}
+/* end of main screen sketch */
+
+/* ALGORITHM PAGE */
+#algorithmCharts h1{
+	color: #fddb94;
+	margin-bottom: 15px;
+}
+#algorithmCharts h2{
+	margin-bottom: 10px;
+}
+.tables table{
+	border-collapse: collapse;
+	border: solid;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	background-color: #f9c901;
+	margin-bottom: 10px;
+	color: white;
+	background-image: url(images/backgrounds/stoneBackground.jpg);
+	background-size: 10%;
+	border-radius: 10px;
+}
+.tables td{
+	border: solid;
+	padding: 10px;
+}
+.tables th{
+	border: solid;
+}
+.tables b{
+	color: #f9c901;
+}
+#container h2{
+	margin-bottom: 15px;
+	color: black;
+	background-image: url(images/backgrounds/sandBackground.jpg);
+	background-size: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	border-radius: 10px;
+	border: solid;
+	font-size: 200%;
+}
+/* END OF ALGORITHMS */
+/* HELP PAGE */
+.screenshots{
+	width: 75%;
+	border: solid;
+	border-radius: 15px;
+}

@@ -1,0 +1,560 @@
+/*
+	James Billinger
+	Yi Bo Cheng
+	06/13/2019
+	Minecraft clicker
+	This is the CSS for our game 
+*/
+*{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+/* fonts */
+@font-face{
+	src: url(../fonts/Minecraftia.ttf);
+	font-family: minecraftFont;
+}
+body{
+	background-image: url(../images/backgrounds/surface.jpg);
+	background-size: cover;
+	font-family: minecraftFont;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+img{
+	user-drag: none; 
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+/* count bar */
+#dollarSign{
+	height: 60%;
+	width: 5%;
+	left: 22%;
+}
+#heart{
+	position: absolute;
+	height: 100%;
+	width: 10%;
+	left: 650px;
+}
+#countBar{
+	background-image: url(../images/headerBackground.jpg);
+	width: 100%;
+	height: 120px;
+	position: absolute;
+	color: white;
+	border-style: solid;
+	border-color: black;
+}
+#lblName{
+	position: absolute;
+	top: 20%;
+	left: 5%;
+	font-size: 50px;
+}
+#lblCount{
+	padding: 6px;
+	font-size: 80px;
+}
+#lblTime{
+	position: absolute;
+	top: 20%;
+	right: 20%;
+	font-size: 50px;
+}
+#clock{
+	position: absolute;
+	top: 18%;
+	width: 5%;
+	right: 27%;
+}
+/* time records */
+#timeRecordsList{
+	position: absolute;
+	top: 20%;
+	left: 5%;
+}
+#timeRecordsList h1{
+	font-size: 20px;
+}
+#lblBestTime{
+	font-size: 17px;
+}
+#timeRecordsListBackground{
+	position: absolute;
+	width: 13%;
+	top: 15%;
+	left: 2%;
+}
+/* clicker */
+.clicker{
+	position: fixed;
+	top: 30%;
+	left: 0;
+	right: 0;
+}
+.clickerImage{
+	width: 10%;
+}
+.clickerImage:hover{
+	opacity: 0.9;
+}
+#clickerImageDragon{
+	position: fixed;
+	top: 20%;
+	left: 30%;
+	right: 0;
+	width: 40%;
+	height: 55%;
+}
+#clickerDragon:hover{
+	opacity: 0.9;
+}
+/* icons */
+#shopStart:hover{
+	opacity: 0.5;
+}
+#helpStart:hover{
+	opacity: 0.5;
+}
+#endStart:hover{
+	opacity: 0.5;
+}
+#settingsImage{
+	position: fixed;
+	top: 14.5%;
+	right: 2%;
+	width: 5%;
+	border: solid;
+	border-radius: 10px;
+}
+#helpImage{
+	position: absolute;
+	bottom: 7%;
+	right: 18%;
+	width: 10%;
+}
+#shopImage{
+	position: absolute;
+	bottom: 7%;
+	left: 19%;
+	height: 23%;
+}
+#lblStore{
+	position: absolute;
+	bottom: 1%;
+	left: 18%;
+	background-color: white;
+	font-size: 30px;
+	padding: 6px;
+	border-radius: 8px;
+}
+#lblHelp{
+	position: absolute;
+	bottom: 1%;
+	right: 20%;
+	background-color: white;
+	font-size: 30px;
+	padding: 6px;
+	border-radius: 8px;
+}
+#hotbar{
+	position: absolute;
+	bottom: 7%;
+	right: 13%;
+	width: 10%;
+}
+/* change buttons*/
+.changeButton{
+	background-image: url(../images/backgrounds/changeBackground.jpg);
+	background-size: cover;
+	height: 100px;
+	width: 400px;
+	border-style: solid;
+	border-radius: 8px;
+	font-size: 40px;
+	color: white;
+	top: 55%;
+	left: 40%;
+}
+#btnChange{
+	position: absolute;
+}
+/* popups */
+.popUp{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+.popUpContent{
+	position: fixed;
+	width: 70%;
+	height: 75%;
+	border-width: 2px;
+	border-radius: 10px;
+	top: 13%;
+	left: 15%;
+}
+/* shop and items */
+#shopPopUpContent{
+	background-image: url(../images/shopBackground.png);
+	background-size: 50%;
+	border: solid;
+	background-size: cover;
+}
+#shopPopupContent img{
+	position: fixed;
+	width: 50%;
+}
+.shopPickaxe{
+	position: absolute;
+	left: 20%;
+	top: 50%;
+	width: 8%;
+	background-color: #C0C0C0;
+	border: solid;
+	border-color: #8B8B8B;
+	border-radius: 10px;
+	filter: brightness(50%);
+}
+.shopPickaxeDescription{
+	position: absolute;
+	top: 50%;
+	right: 7%;
+	background-color: #C0C0C0;
+	padding: 2%;
+	border: solid;
+	border-color: #8B8B8B;
+	border-radius: 10px;
+	filter: brightness(50%);
+}
+.shopAxe{
+	position: absolute;
+	left: 20%;
+	top: 30%;
+	width: 8%;
+	background-color: #C0C0C0;
+	border: solid;
+	border-color: #8B8B8B;
+	border-radius: 10px;
+	filter: brightness(50%);
+}
+.shopAxeDescription{
+	position: absolute;
+	top: 30%;
+	right: 17.5%;
+	background-color: #C0C0C0;
+	padding: 2%;
+	border: solid;
+	border-color: #8B8B8B;
+	border-radius: 10px;
+	filter: brightness(50%);
+}
+.shopRedstone{
+	position: absolute;
+	top: 10%;
+	left: 20%;
+	width: 8%;
+	background-color: #C0C0C0;
+	border: solid;
+	border-color: #8B8B8B;
+	border-radius: 10px;
+	filter: brightness(50%);
+}
+.shopRedstoneDescription{
+	position: absolute;
+	top: 10%;
+	right: 25%;
+	background-color: #C0C0C0;
+	padding: 2%;
+	border: solid;
+	border-color: #8B8B8B;
+	border-radius: 10px;
+	filter: brightness(50%);
+}
+.shopSpecial{
+	position: absolute;
+	left: 20%;
+	top: 70%;
+	width: 8%;
+	background-color: #C0C0C0;
+	border: solid;
+	border-color: #8B8B8B;
+	border-radius: 10px;
+	filter: brightness(50%);
+}
+.shopSpecialDescription{
+	position: absolute;
+	top: 72%;
+	right: 11%;
+	background-color: #C0C0C0;
+	padding: 2%;
+	border: solid;
+	border-color: #8B8B8B;
+	border-radius: 10px;
+	filter: brightness(50%);
+}
+#lblRedstonePrice{
+	position: absolute;
+	left: 5%;
+	top: 15%;
+	color: green;
+	font-size:  30px;
+}
+#lblAxesPrice{
+	position: absolute;
+	left: 5%;
+	top: 33.5%;
+	color: green;
+	font-size:  30px;
+}
+#lblPickaxesPrice{
+	position: absolute;
+	left: 5%;
+	top: 54%;
+	color: green;
+	font-size:  30px;
+}
+#lblSpecialPrice{
+	position: absolute;
+	left: 5%;
+	top: 73.5%;
+	color: green;
+	font-size:  30px;
+}
+.btnClose{
+	position: absolute;
+	bottom: 4%;
+	left: 42%;
+	height: 50px;
+	width: 200px;
+}
+/* settings */
+#settingsPopUpContent{
+	background-image: url(../images/backgrounds/stoneBackground.jpg);
+	background-size: 10%;
+	border: solid;
+}
+#bossMusic{
+	position: absolute;
+	left: 39%;
+}
+#btnCloseSettings{
+	position: absolute;
+	bottom: 10%;
+	height: 50px;
+	width: 200px;
+	left: 43%;
+}
+.pageControl:hover{
+	opacity: 0.5;
+}
+#moneyButton{
+	position: absolute;
+	bottom: 20%;
+	height: 50px;
+	width: 200px;
+	left: 43%;
+}
+/* help */
+#helpPopUpContent{
+	background-image: url(../images/backgrounds/sign.png);
+	background-size: 50%;
+	border: solid;
+}
+#helpPopUpContent2{
+	background-image: url(../images/backgrounds/sign.png);
+	background-size: 50%;
+	border: solid;
+}
+#helpPopUpContent3{
+	background-image: url(../images/backgrounds/sign.png);
+	background-size: 50%;
+	border: solid;
+}
+#helpDiv h1{
+	color: white;
+}
+#helpDiv img{
+	margin-top: 30px;
+	background-color: grey;
+	border: solid;
+	border-color: black;
+	border-radius: 10px;
+}
+#helpDiv h2{
+	margin-top: 25px;
+	text-decoration: underline;
+}
+#helpDiv p{
+	line-height: 30px;
+}
+#nextPage{
+	position: absolute;
+	bottom: 1%;
+	right: 9%;
+	width: 7%; 
+}
+#nextPage2{
+	position: absolute;
+	bottom: 1%;
+	right: 9%;
+	width: 7%; 
+}
+#previousPage{
+	position: absolute;
+	bottom: 1%;
+	left: 9%;
+	width: 7%; 
+}
+#previousPage3{
+	position: absolute;
+	bottom: 1%;
+	left: 9%;
+	width: 7%; 
+}
+/* boss screen */
+.endText{
+	color: red;
+	position: fixed;
+	top: 10%;
+	left: 2%;
+	font-size: 50px;
+	margin: 20%;
+}
+#lblEndtext3{
+	color: red;
+	position: fixed;
+	top: 10%;
+	left: 10%;
+	font-size: 50px;
+	margin: 20%;
+}
+#lblEnd{
+	position: absolute;
+	bottom: 1%;
+	right: 45.5%;
+	background-color: white;
+	font-size: 30px;
+	padding: 6px;
+	border-radius: 8px;
+}
+#lblDragon{
+	color: red;
+	position: fixed;
+	top: 90%;
+	left: 32%;
+	font-size: 50px;
+}
+#endImage{
+	position: absolute;
+	bottom: 7%;
+	left: 46%;
+}
+/* win screen*/
+#winPopUpContent{
+	position: absolute;
+	background-image: url(../images/backgrounds/winBackground2.jpg);
+	border: solid;
+	color: white;
+	padding: 10%;
+	height: 50%;
+	width: 60%;
+	left: 10%;
+	top: 2%;
+}
+#btnContinue{
+	width: 100px;
+	height: 40px;
+	top: 60%;
+}
+/* start/name popup */
+#namePopUpContent{
+	background-image: url(../images/backgrounds/stoneBackground.jpg);
+	background-size: 10%;
+	border: solid;
+}
+#namePopup{
+	position: fixed;
+	border-width: 2px;
+	border-radius: 10px;
+}
+#namePopUpContent{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	border-width: 2px;
+	border-radius: 10px;
+}
+#divNameInput{
+	position: fixed;
+	top: 50%;
+	left: 25%;
+	width: 50%;
+	font-size: 20px;
+}
+#divNameInput input{
+	margin-top: 20px;
+	height: 20%;
+	font-size: 20px;
+	font-family: minecraftFont;
+}
+#gameTitle{
+	background-image: url(../images/backgrounds/woodPlank.png);
+	background-size: 10%;
+}
+#gameTitle p{
+	color: white;
+	font-size: 75px;
+}
+#gameTitle img{
+	width: 60%;
+}
+#startMapBackground{
+	position: fixed;
+	width: 23%;
+	height: 50%;
+	bottom: 10%;
+	left: 38%;
+	z-index: -1;
+}
+#btnPlay{
+	position: fixed;
+	left: 47%;
+	bottom: 20%;
+	width: 5%;
+	height: 5%;
+}
+/* achievement banner */
+#achievementBanner{
+	position: absolute;
+	right: 10%;
+	top: 3%;
+	background-color: #212121;
+	border: solid;
+	border-width: 5px;
+	border-color: #555555;
+	border-radius: 20px;
+	width: 25%;
+	padding: 16px;
+	z-index: -1;
+}
+#achievementBannerHeading{
+	color: #E9F447;
+}
+#achievementBannerHeadingText{
+	color: #F3F3F3;
+}
+#achievementBanner img{
+	width: 14%;
+	position: absolute;
+	top: 5%;
+	left: 5%;
+}

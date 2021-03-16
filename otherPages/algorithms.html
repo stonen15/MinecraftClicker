@@ -1,0 +1,104 @@
+<!-- 
+	James Billinger
+	Yi Bo Cheng
+	05/31/2019
+	Bee clicker
+	This is the HTML for the algorithms page of our game 
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- font links -->
+		<link href="https://fonts.googleapis.com/css?family=Metrophobic" rel="stylesheet">		
+		<!-- end of font links -->
+		<title>Algorithms</title>
+		<!-- styles sheet -->
+		<link rel="stylesheet" type="text/css" href="../homepage.css">
+		<!-- end of styles sheet -->
+	</head>
+	
+	<body>
+		<!-- heading html -->
+		<div id="heading">
+			<div id="titles">
+				<h1>Algorithms</h1>
+				<a href="../index.html"><img src="../images/home.png" id="home"></a>
+			</div>
+		</div>
+		<!-- end of heading html -->
+		<!-- algorithm charts  -->
+		<div id="container">
+			<div id="algorithmCharts">
+				<h1><u>Click with Items Algorithms</u></h1>
+				<!-- IPO chart -->
+				<div class="tables">
+					<h2>IPO Chart</h2>
+					<table>
+						<tr>
+							<th>Input</th>
+							<th>Process</th>
+							<th>Output</th>
+						</tr>
+						<tr>
+							<td>icon.click</td>
+							<td>
+								add++;
+								<br>
+								if (itemMultiplier>0)<br>
+								{<br>
+								add*=itemMultiplier;<br>
+								}<br>
+								count+=add;
+							</td>
+							<td>count</td>
+						</tr>
+					</table>
+				</div>
+				<!-- end of IPO chart -->
+				<!-- flowchart -->
+				<div id="flowchart">
+					<h2>Flowchart</h2>
+					<img src="../images/sketches/flowchart.png" class="sketches">
+				</div>
+				<!-- end of flowchart -->
+				<!-- pseudocode -->
+				<div id="pseudocode">
+					<h2>Pseudocode</h2>
+					<div class="tables">
+						<table>
+							<tr>
+								<th>Pseudocode</th>
+								<th>Code</th>
+							</tr>
+							<tr>
+								<td>
+									read click<br>
+									add=add plus 1<br>
+									if itemMultiplier is bigger than 0<br>
+									<b>....</b>add=multiplier times add
+									<br>
+									count=count plus add
+									<br>
+									print count
+								</td>
+								<td>
+									icon.click
+									<br>
+									add++;
+									<br>
+									add*=multiplier;
+									<br>
+									count+=add;
+									<br>
+									$("lblCount").text(count);
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!-- end of pseudocode -->
+			</div>
+			<!-- end of algorithm charts -->
+		</div>
+	</body>
+</html>

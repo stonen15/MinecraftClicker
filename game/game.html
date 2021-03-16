@@ -1,0 +1,232 @@
+<!-- 
+	James Billinger
+	Yi Bo Cheng
+	06/13/2019
+	Minecraft clicker
+	This is the HTML for our game 
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Game</title>
+		<!-- font links -->
+		<link href="https://fonts.googleapis.com/css?family=Metrophobic" rel="stylesheet">		
+		<!-- jquery -->
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"></script>
+			<!-- javascript link -->
+			<script type="text/javascript" src="game.js"></script>
+		 	<!-- css link -->
+			<link rel="stylesheet" type="text/css" href="game.css">
+	</head>
+
+	<body>
+		<!-- count bar -->
+		<div id="countBar">
+			<img id="dollarSign" src="../images/dollarSign.png">
+			<img id="heart" src="../images/heart.png">
+			<img id="clock" class="timer" src="../images/timer.png">
+			<label id="lblCount">0</label>
+			<label id="lblCount2">0</label>
+			<label id="lblName"></label>
+			<label id="lblTime" class="timer">0</label>
+		</div>
+		<!-- clickers -->
+		<div id="clickerWood" class="clicker">
+			<img src="../images/clickers/log.png" id="clickerImageWood" class="clickerImage">
+		</div>
+		<div id="clickerStone" class="clicker">
+			<img src="../images/clickers/stone.png" id="clickerImageStone" class="clickerImage">
+		</div>
+		<div id="clickerIronOre" class="clicker">
+			<img src="../images/clickers/ironOre.png" id="clickerImageIronOre" class="clickerImage">
+		</div>
+		<div id="clickerGoldOre" class="clicker">
+			<img src="../images/clickers/goldOre.png" id="clickerImageGoldOre" class="clickerImage">
+		</div>
+		<div id="clickerDiamondOre" class="clicker">
+			<img src="../images/clickers/diamondOre.png" id="clickerImageDiamondOre" class="clickerImage">
+		</div>
+		<div id="clickerDragon">
+			<img src="../images/clickers/dragonClicker.png" id="clickerImageDragon">
+		</div>
+		<!-- time records -->
+		<img id="timeRecordsListBackground" src="../images/map.png">
+		<div id="timeRecordsList">
+			<h1>BEST TIME</h1>
+			<label id="lblBestTime"></label>
+		</div>
+		<!-- change button -->
+		<button id="btnChange" class="changeButton">Cycle materials</button>
+		<!-- clickable icons -->
+		<div id="shopStart">
+			<img  id="shopImage" src="../images/shopImage.png" class="icons">
+			<label id="lblStore" class="labels">Store</label>
+		</div>
+		<div id="helpStart">
+			<img  id="helpImage" src="../images/helpImage.png" class="icons">
+			<label id="lblHelp" class="labels">Help</label>
+		</div>
+		<div id="endStart">
+			<img id="endImage" src="../images/endPortal.png" class="icons" class="openEnd">
+			<label id="lblEnd" class="labels">The End</label>
+		</div>
+		<img id="settingsImage" src="../images/settingsImage.png" class="icons" class="openSettings">
+		<label id="lblEnd2" class="labels">The End</label>
+		<label id="lblEndtext1" class="endText">So you think that you can enter my home...</label>
+		<label id="lblEndtext2" class="endText">Ruining my perfect untouched world with your very existence...</label>
+		<label id="lblEndtext3">This act is unforgivable...</label>
+		<label id="lblEndtext4" class="endText">I will make sure to savour every last bit of your flesh.</label>
+		<label id="lblDragon" class="DragonLabel">Kill the Ender Dragon!!!</label>
+		<!-- POPUPS -->
+		<!-- shop -->
+		<div id="shopPopUp" class="popUp">
+			<div id="shopPopUpContent" class="popUpContent">
+				<h1>Shop</h1>
+				<div id="itemCost">
+					<label id="lblRedstonePrice" class="lblPrice">20</label>
+					<label id="lblAxesPrice" class="lblPrice">100</label>
+					<label id="lblPickaxesPrice" class="lblPrice">1000</label>
+					<label id="lblSpecialPrice" class="lblPrice">10000000</label>
+				</div>
+				<div id="redstone">
+					<p id="shop_redstoneDustDescription" class="shopRedstoneDescription">Redstone Dust: +1 every 5 sec</p>
+					<img src="../images/redstoneItems/redstoneDust.png" id="shop_redstoneDust" class="shopRedstone">
+					<p id="shop_redstoneBlockDescription" class="shopRedstoneDescription">Redstone Block: +1 every 1 sec</p>
+					<img src="../images/redstoneItems/redstoneBlock.png" id="shop_redstoneBlock" class="shopRedstone">
+					<p id="shop_redstoneRepeaterDescription" class="shopRedstoneDescription">Redstone Repeater: +1 every 0.5 sec</p>
+					<img src="../images/redstoneItems/redstoneRepeater.png" id="shop_redstoneRepeater" class="shopRedstone">
+				</div>
+				<div id="axes">
+					<p id="shop_woodAxeDescription" class="shopAxeDescription">A Wooden Axe: gives+2 per click on <b>wood</b>.</p>
+					<img src="../images/cursors/woodAxe.png" id="shop_woodAxe" class="shopAxe">
+					<p id="shop_stoneAxeDescription" class="shopAxeDescription">A Stone Axe: gives+3 per click on <b>wood</b>.</p>
+					<img src="../images/cursors/stoneAxe.png" id="shop_stoneAxe" class="shopAxe">
+					<p id="shop_ironAxeDescription" class="shopAxeDescription">An Iron Axe: gives+4 per click on <b>wood</b>.</p>
+					<img src="../images/cursors/ironAxe.png" id="shop_ironAxe" class="shopAxe">
+					<p id="shop_goldAxeDescription" class="shopAxeDescription">A Gold Axe: gives+5 per click on <b>wood</b>.</p>
+					<img src="../images/cursors/goldAxe.png" id="shop_goldAxe" class="shopAxe">
+					<p id="shop_diamondAxeDescription" class="shopAxeDescription">A Diamond Axe: gives+6 per click on <b>wood</b>.</p>
+					<img src="../images/cursors/diamondAxe.png" id="shop_diamondAxe" class="shopAxe">
+				</div>
+				<div id="pickaxes">
+					<p id="shop_woodPickaxeDescription" class="shopPickaxeDescription">A Wooden Pickaxe: gives+2 per click on <b>stone or ores</b>.</p>
+					<img src="../images/cursors/woodPickaxe.png" id="shop_woodPickaxe" class="shopPickaxe">
+					<p id="shop_stonePickaxeDescription" class="shopPickaxeDescription">A Stone Pickaxe: gives+3 per click on <b>stone or ores</b>.</p>
+					<img src="../images/cursors/stonePickaxe.png" id="shop_stonePickaxe" class="shopPickaxe">
+					<p id="shop_ironPickaxeDescription" class="shopPickaxeDescription">An Iron Pickaxe: gives+4 per click on <b>stone or ores</b>.</p>
+					<img src="../images/cursors/ironPickaxe.png" id="shop_ironPickaxe" class="shopPickaxe">
+					<p id="shop_goldPickaxeDescription" class="shopPickaxeDescription">A Gold Pickaxe: gives+5 per click on <b>stone or ores</b>.</p>
+					<img src="../images/cursors/goldPickaxe.png" id="shop_goldPickaxe" class="shopPickaxe">
+					<p id="shop_diamondPickaxeDescription" class="shopPickaxeDescription">A Diamond Pickaxe: gives+6 per click on <b>stone or ores</b>.</p>
+					<img src="../images/cursors/diamondPickaxe.png" id="shop_diamondPickaxe" class="shopPickaxe">		
+				</div>
+				<div id="eyeOfEnder">
+					<p id="shop_eyeOfEnderDescription" class="shopSpecialDescription">Gives the ability to access <b>The End</b>: One time use.</p>
+					<img src="../images/redstoneItems/eyeOfEnder.png" id="shop_eyeOfEnder" class="shopSpecial">
+				</div>
+				<button id="btnCloseShop" class="btnClose">Close</button>
+			</div>	
+		</div>
+		<!-- settings -->
+		<div id="settingsPopUp" class="popUp">
+			<div id="settingsPopUpContent" class="popUpContent">
+				<h1>Settings</h1><br><br>
+				<h2>Music Settings</h2>
+				<audio src="../audio/subwooferLullaby.mp3" controls="" autoplay="" loop="" id="mainMusic"></audio><br><br>
+				<h2>Boss Music</h2>	
+				<audio src="../audio/bossMusic.mp3" autoplay="" controls="" loop="" id="bossMusic"></audio>
+				<button id="moneyButton">Krnic cheat button</button>
+				<button id="btnCloseSettings" class="btnClose">Close</button>
+			</div>
+		</div>
+		<!-- help -->
+		<div id="helpDiv">
+			<div id="helpPopUp" class="popUp">
+				<div id="helpPopUpContent" class="popUpContent">
+					<h1>Help</h1><br>
+					<h2>How To Play</h2><br>
+					<p>
+						The goal of this game is to mine up diffent resources in order to gain more and more money. gather upgrades to make your mining more efficient and upgrade your tools. Keep mining and mining until you become so powerfull, you could slay a dragon. 
+					</p>
+					<h2>Items</h2>
+					<img src="../images/cursors/woodPickaxe.png">
+					<p>
+						<u>All of a set's items must be purchased before unlocking the next set of items.</u><br>
+						Items are purchased from the shop and each item can only be purchased<b>once</b>.<br>
+						<b>Tools:</b> When purchased, the tools will increase the value per click <u>depending on the block it is used on</u>.<br>
+						After buying a tool, the upgraded version of the tool will be available for sale.<br>
+						Each tool's upgrade will increase value per click by 1. 
+					</p>
+					<img id="nextPage" class="pageControl" src="../images/arrowNext.png">
+					<button id="btnCloseHelp" class="btnClose">Close</button>
+				</div>
+			</div>
+			<div id="helpPopUp2" class="popUp">
+				<div id="helpPopUpContent2" class="popUpContent">
+					<h1>Help (page 2)</h1><br>
+					<h2>Items (contiuned)</h2>
+					<img src="../images/redstoneItems/redstoneDust.png">
+					<p>
+						<b>Redstone:</b> This category of items will give you <u>$1 for a certain amount of seconds depending</u> on the item.
+					</p>
+					<h2>Blocks</h2>
+					<img src="../images/clickers/ironOre.png" width="100" height="100">
+					<p>
+						Each block has a different value.<br>
+						The value increases by 1 starting from wood.<br>
+						<u>You can unlock other blocks by purchasing the right items in the store.</u>
+					</p>
+					<img id="previousPage" class="pageControl" src="../images/arrowPrev.png">
+					<img id="nextPage2" class="pageControl" src="../images/arrowNext.png">
+					<button id="btnCloseHelp2" class="btnClose">Close</button>
+				</div>
+			</div>
+			<div id="helpPopUp3" class="popUp">
+				<div id="helpPopUpContent3" class="popUpContent">
+					<h1>Help (page 3)</h1><br>
+					<h2>The <b>Eye of Ender</b></h2>
+					<img src="../images/redstoneItems/eyeOfEnder.png">
+					<p>
+						???????????????????<br>
+						Buy to find out.
+					</p>
+					<img id="previousPage3" class="pageControl" src="../images/arrowPrev.png">
+					<button id="btnCloseHelp3" class="btnClose">Close</button>
+				</div>
+			</div>
+		</div>
+		<!-- Win screen -->
+		<div id="winPopUp" class="popUp">
+			<div id="winPopUpContent" class="popUpContent">
+				<br><br><br><br>
+				<h1>You have slain the Ender Dragon!</h1><br>
+				<h2>Thanks to you, a new era of peace and tranquility shall wash over the four corners of the globe.</h2><br>
+				<button id="btnContinue" class="btnClose">Continue</button>
+			</div>
+		</div>
+		<!-- start popup -->
+		<div id="namePopup" class="popUp">
+			<div id="namePopUpContent">
+				<div id="gameTitle">
+					<img src="../images/minecraftLogo.png">
+					<p>CLICKER</p>
+				</div>
+				<div id="divNameInput">
+					<p id="nameTxt">Please enter your name</p>
+					<input type="text" id="txtNameInput">
+					<button id="btnPlay">Play</button>
+					<img id="startMapBackground" src="../images/map.png">
+				</div>
+			</div>
+		</div>
+		<!-- achievement Banner -->
+		<div id="achievementBanner">
+			<p id="achievementBannerHeading">New Material Get!</p>
+			<p id="achievementBannerHeadingText">Press "Cycle Materials"</h3>
+			<img id="achievementBannerImg" src="../images/clickers/stone.png">
+		</div>
+	</body>
+</html>
